@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SistemaCalificaciones.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Universidad Israel" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+        <Label Padding="20" Text="Sistema de Calificaciones " HorizontalTextAlignment="Center" FontSize="30" />
+        
+        <Grid Padding="20">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" Text="Parcial 1" TextColor="#4040ff" FontSize="20" />
+            <Entry x:Name="txtN1" Grid.Row="0" Grid.Column="1" Placeholder="NOTA 1" Keyboard="Numeric"/>
+            <Entry x:Name="txtE1" Grid.Row="0" Grid.Column="2" Placeholder="EXAM 1" Keyboard="Numeric"/>
+            <Entry x:Name="txtT1" Grid.Row="0" Grid.Column="3" Placeholder="TotalP1" IsReadOnly="True"/>
+
+            <Label  Grid.Row="1" Grid.Column="0" Text="Parcial 2" TextColor="#4040ff"  FontSize="20" />
+            <Entry x:Name="txtN2" Grid.Row="1" Grid.Column="1" Placeholder="NOTA 2" Keyboard="Numeric"/>
+            <Entry x:Name="txtE2" Grid.Row="1" Grid.Column="2" Placeholder="EXAM 2" Keyboard="Numeric" />
+            <Entry x:Name="txtT2" Grid.Row="1" Grid.Column="3" Placeholder="TotalP2" IsReadOnly="True"/>
+
+            <Entry x:Name="txtNF" Grid.Row="2" Grid.Column="3" Placeholder="Nota Final" IsReadOnly="True"/>
+
+        </Grid>
+
+        <Button Text="Calcular" x:Name="btnValidar" WidthRequest      ="100"
+                                                    HeightRequest     ="50"
+                                                    TextColor="White"
+                                                    VerticalOptions   ="Center"
+                                                    HorizontalOptions ="Center"
+                                                    BackgroundColor   ="#2196F3" 
+                                                    Clicked="btnValidar_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
